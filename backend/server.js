@@ -10,6 +10,6 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(router);
 connectDb();
-
+app.use("/storage", express.static("storage"));
 app.use(errorHandler);
 app.listen(PORT, console.log(`server is runing on PORT:${PORT}`));
